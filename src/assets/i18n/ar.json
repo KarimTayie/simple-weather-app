@@ -1,0 +1,25 @@
+{
+  "NAVBAR": {
+    "CURRENTWEATHER": "الطقس الحالي",
+    "FORECAST": "المناخ"
+  },
+  "FOOTER": {
+    "TEXT1": "صنع بالحب بواسطة كريم"
+  },
+  "SEARCHINPUT": {
+    "SEARCH": "ابحث",
+    "PLACEHOLDER": "ابحث باسم المدينة"
+  },
+  "CARDITEM": {
+    "UNITS": {
+      "BAR": "بار",
+      "M/S": "م/ث"
+    },
+    "TABLEHEAD": {
+      "DATE": "التاريخ",
+      "TEMP": "درجة الحرارة",
+      "ICON": "الايقون"
+    },
+    "LASTUPDATED": "اخر تحديث"
+  }
+}

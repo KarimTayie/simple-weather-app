@@ -1,0 +1,10 @@
+<form novalidate [formGroup]="searchForm" #sForm="ngForm" (ngSubmit)="onSubmit()" class="mt-5">
+  <div class="form-row text-center" [ngClass]="{'flex-row-reverse': translateService.currentLang === 'ar'}">
+    <div class="col-12 col-md-10">
+      <input type="text" class="form-control" [ngClass]="{'text-right': translateService.currentLang === 'ar'}" attr.placeholder="{{'SEARCHINPUT.PLACEHOLDER' | translate}}" formControlName="searchInput" required>
+    </div>
+    <div class="col mt-3 mt-md-0">
+      <button type="submit" class="btn btn-success ml-auto" [disabled]="searchForm.invalid">{{ 'SEARCHINPUT.SEARCH' | translate }}</button>
+    </div>
+  </div>
+</form>

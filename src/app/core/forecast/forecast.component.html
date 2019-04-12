@@ -1,0 +1,42 @@
+<section class="current-weather" *ngIf="forecastData">
+  <app-search-input api="forecast"></app-search-input>
+  <div class="row">
+    <div class="col-xs-12 col-md-10 mx-auto mt-4">
+      <div class="card text-center position-relative">
+        <button class="position-absolute btn p-0" style="right: 20px; top: 20px; z-index: 1;" (click)="getForecastData(translateService.currentLang)">
+          <i class="fa fa-refresh fa-2x" aria-hidden="true"></i>
+        </button>
+        <div class="row mx-0 border-bottom">
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th colspan="4">{{ forecastData.city.name }}, {{ forecastData.city.country }}</th>
+                </tr>
+                <tr>
+                  <th scope="col">{{ 'CARDITEM.TABLEHEAD.DATE' | translate }}</th>
+                  <th scope="col">{{ 'CARDITEM.TABLEHEAD.TEMP' | translate }}</th>
+                  <th scope="col">{{ 'CARDITEM.TABLEHEAD.ICON' | translate }}</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let li of forecastData.list">
+                  <td>{{ li.dt_txt | date:'MMM d, y, h:mm a' }}</td>
+                  <td>{{ li.main.temp }}&#176;</td>
+                  <td>
+                    <img [src]="'http://openweathermap.org/img/w/' + li.weather[0]['icon'] + '.png'" alt="Weather Image">
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">{{ 'CARDITEM.LASTUPDATED' | translate }} <time>{{ lastUpdated | amTimeAgo }}</time></small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

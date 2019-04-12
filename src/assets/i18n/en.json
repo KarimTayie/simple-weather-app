@@ -1,0 +1,25 @@
+{
+  "NAVBAR": {
+    "CURRENTWEATHER": "Current Weather",
+    "FORECAST": "Forecast"
+  },
+  "FOOTER": {
+    "TEXT1": "Made With Love By Karim"
+  },
+  "SEARCHINPUT": {
+    "SEARCH": "Search",
+    "PLACEHOLDER": "Search by City name"
+  },
+  "CARDITEM": {
+    "UNITS": {
+      "BAR": "bar",
+      "M/S": "m/s"
+    },
+    "TABLEHEAD": {
+      "DATE": "Date",
+      "TEMP": "Temp.",
+      "ICON": "Icon"
+    },
+    "LASTUPDATED": "Last Updated"
+  }
+}

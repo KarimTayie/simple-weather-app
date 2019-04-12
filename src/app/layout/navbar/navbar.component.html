@@ -1,0 +1,23 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light" [ngClass]="{'flex-row-reverse': radioModel === 'ar'}">
+  <a class="navbar-brand" routerLink="/">Navbar</a>
+  <button class="navbar-toggler" type="button" (click)="isCollapsed = !isCollapsed" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse text-center" [collapse]="isCollapsed" [ngClass]="{'flex-row-reverse': radioModel === 'ar'}">
+    <ul class="navbar-nav" [ngClass]="{'ml-auto': radioModel === 'ar', 'mr-auto': radioModel !== 'ar'}">
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="current-weather">{{ 'NAVBAR.CURRENTWEATHER' | translate}}</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="forecast">{{ 'NAVBAR.FORECAST' | translate }}</a>
+      </li>
+    </ul>
+    <div class="btn-group" btnRadioGroup [(ngModel)]="radioModel" (ngModelChange)="translate.use(radioModel)">
+      <label class="btn btn-info mb-0" btnRadio="en"
+              tabindex="0" role="button">en</label>
+      <label class="btn btn-info mb-0" btnRadio="ar"
+              tabindex="0" role="button">ar</label>
+    </div>
+  </div>
+</nav>
